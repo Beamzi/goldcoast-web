@@ -1,7 +1,24 @@
 //Use this on host side to control component.
 import { footerComponent } from '../node_modules/uiframeworklite/src/components/footer/footer.js'
+import { headerComponent } from '../node_modules/uiframeworklite/src/components/header/header.js'
+
+const header = document.querySelector('header-component');
+
+
 
 const footer = document.querySelector('footer-component');
+
+header.updateMenuData({
+	imgPath: '../assets/images/Screenshot 2024-09-10 151334ss.png',
+	homeLink: 'placeholder',
+	aboutLink: 'placeholder',
+	servicesLink: 'placeholder',
+	instaLink: 'placeholder',
+	fbLink: 'placeholder',
+	twitterLink: 'placeholder',
+	}
+)
+
 
 footer.updateListData({
 	company: 'Huge Startup',
@@ -79,7 +96,6 @@ footer.updateListData({
 
 
 footer.listControl(3, 3, 3, true)
-
 const deleteList = (num) => {
 
 	const listContainer = document.querySelectorAll('.footer__list-container')
@@ -93,6 +109,10 @@ const deleteList = (num) => {
 
 };
 deleteList(0);
+
+
+
+
 
 
 
