@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" as="image" href="assets/images/pexels-fauxels-3182763.jpg">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-    <header-component></header-component>
-    <footer-component></footer-component>
+
+    <div class="header-wrapper">
+       <header-component></header-component>
+    </div>
+
+    <main>
+
+        <section class="hero-panel">
+            <div class="hero-panel__overlay"></div>
+
+            <div class="hero-panel__content" >
+                <div class="hero-panel__content-text">
+                    <h1>Custom Websites from $950 </h1>
+                    <h3>Designed for the Gold Coast, Built for the World</h3>
+                    <button>Let's have a conversation
+                    </button>
+                </div>
+                <div class="hero-panel__content-visuals">
+                    <div class="hero-panel__animation"></div>
+                    <img src="assets/images/goldcoast-web-hero-img.jpg">  
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <p>Your Gold Coast business deserves a website that captures the beauty and energy of our city. Whether you're a local retailer, café, or service provider, we create custom websites that reflect the unique spirit of the Gold Coast while delivering results. From sleek, user-friendly designs to seamless functionality, we craft online experiences that grow with your business—both locally and globally.
+            </p>
+        </section>
+
+    </main>
+
+    <div class="footer-wrapper">
+        <footer-component></footer-component>
+    </div>
+
+
+
     <script type="module" src="./js/main.js"></script>
-    
 </body>
 </html>

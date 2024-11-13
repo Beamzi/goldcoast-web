@@ -3,10 +3,9 @@ import { footerComponent } from '../node_modules/uiframeworklite/src/components/
 import { headerComponent } from '../node_modules/uiframeworklite/src/components/header/header.js'
 
 const header = document.querySelector('header-component');
-
-
-
 const footer = document.querySelector('footer-component');
+
+
 
 header.updateMenuData({
 	imgPath: '../assets/images/Screenshot 2024-09-10 151334ss.png',
@@ -19,6 +18,16 @@ header.updateMenuData({
 	}
 )
 
+/* "This structure may look a little strange at first, 
+but it's designed like a data sheet to clearly organize 
+the content in the header and footer. The key names like item1__01 or link1__01 
+aren’t random—they represent a structured, hierarchical dataset that’s mapped 
+directly to sections on the page. This way, if I need to dynamically change any section, 
+it’s really easy to reference and update the exact data point I want, without having 
+to mess with reordering arrays or searching for specific items in nested structures. 
+It's basically a spreadsheet in code—very readable and scalable. The naming convention 
+makes it clear where each piece of content belongs, and this system is flexible enough 
+to handle future additions." */
 
 footer.updateListData({
 	company: 'Huge Startup',
@@ -96,6 +105,9 @@ footer.updateListData({
 
 
 footer.listControl(3, 3, 3, true)
+
+
+
 const deleteList = (num) => {
 
 	const listContainer = document.querySelectorAll('.footer__list-container')
@@ -106,8 +118,8 @@ const deleteList = (num) => {
 		else {num = null 
 			console.log(num) }
 	});
-
 };
+
 deleteList(0);
 
 

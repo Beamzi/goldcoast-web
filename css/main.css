@@ -6,14 +6,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+
+
+html, body, h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font-family: monospace;
-    line-height: 1.5;
+
 }
+
 
 ol, ul {
     list-style: none;
@@ -21,13 +24,137 @@ ol, ul {
     margin: 0;
 }
 
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 
 a {
     text-decoration: none;
     color: inherit;
     font-family: monospace;
 }
+
+.header-wrapper {
+    min-height: 100px;
+}
+
+.footer-wrapper {
+    min-height: 300px;
+    background-color: rgb(34, 34, 34);
+}
+
+.hero-panel {
+    position: relative;
+    background-color: #333;
+    width: 100%;
+    min-height: 50vh;
+    padding: 200px 10% 200px 10%;
+
+    display: flex;
+    justify-content: center;
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    div {
+        padding: 20px;
+    }
+
+}
+
+
+.hero-panel__overlay {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;  /* Height of the wave */
+    background-color: rgb(194, 194, 194); 
+    background-image: url('../assets/images/goldcoast.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    clip-path: circle(50% at 91% 90%);
+}
+
+
+
+.hero-panel__content {
+    color: white;
+    z-index: 2;
+    display: flex;
+    div {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    img {
+        width: 100%;
+        z-index: 3;
+    }
+}
+    
+.hero-panel__content-visuals {
+    position: relative;
+    display: flex;
+}
+.hero-panel__content-text {
+    align-items: start;
+    h1, h3 {
+        text-align: start;
+        margin-bottom: 15px;
+    }
+    button {
+        padding: 10px;
+        margin-top: 7px;
+    }
+}
+
+.hero-panel__animation {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(24,231,142,1) 0%, rgba(0,208,255,1) 100%);
+    background-size: 200% 200%; /* Make the background larger to allow for smooth movement */
+    max-width: 100%;
+    height: 100%;
+    animation: morphing 8s linear infinite;
+}
+
+@keyframes morphing {
+    0% {
+        transform: scale(1) rotate(0deg);
+        background-position: 0% 0%;
+    }
+    25% {
+        transform: scale(1.05) rotate(10deg);
+        background-position: 100% 0%;
+    }
+    50% {
+        transform: scale(1.1) rotate(-10deg);
+        background-position: 100% 100%;
+    }
+    75% {
+        transform: scale(1.05) rotate(3deg);
+        background-position: 0% 100%;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        background-position: 0% 0%;
+    }
+}
+
+
+  /*
+  background: rgb(108,24,231);
+  background: linear-gradient(90deg, rgba(108,24,231,1) 0%, rgba(255,147,0,1) 100%);
+  */
