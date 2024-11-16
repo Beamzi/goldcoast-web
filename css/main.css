@@ -8,7 +8,7 @@
 
 
 
-html, body, h1, h2, h3, h4, p {
+html, body, h1, h2, h3, h4, p, a {
     margin: 0;
     padding: 0;
     border: 0;
@@ -153,8 +153,53 @@ a {
     }
 }
 
+.services__card-container {
+    display: flex;
+    border: 3px red solid;
 
-  /*
-  background: rgb(108,24,231);
-  background: linear-gradient(90deg, rgba(108,24,231,1) 0%, rgba(255,147,0,1) 100%);
-  */
+}
+
+.services__card {
+    overflow: hidden;
+    border-radius: 5px; 
+    background: linear-gradient(180deg, rgba(24,231,142,1) 0%, rgba(0,208,255,1) 100%);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h3, p {
+        padding: 20px;
+        text-align: center;
+    }
+    a {
+        text-align: center;
+        background-color: rgb(0, 104, 196);
+        transform: scaleY(0.4);
+        transform-origin: bottom;
+        color: rgba(0, 0, 0, 0);
+    }
+    &:hover {
+        a {
+            animation: 0.3s linear forwards grow;
+            transform-origin: bottom;
+            color: rgba(0, 0, 0, 0);
+        }
+    }
+    a p {
+        transform: scaleY(0.5);
+        transition: none;
+    }
+}
+@keyframes grow {
+    0% {
+        transform: scaleY(0.4);
+        color: rgba(0, 0, 0, 0);
+    }
+    50% {
+        color: rgba(197, 0, 0, 0.493);
+    }
+    100% {
+        transform: scaleY(2);
+        color: rgb(255, 255, 255);
+    }
+}
