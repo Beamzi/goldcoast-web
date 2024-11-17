@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preload" as="image" href="assets/images/pexels-fauxels-3182763.jpg">
+    <link rel="preload"href="assets/images/pexels-fauxels-3182763.jpg" as="image">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-
 
     <div class="header-wrapper">
        <header-component></header-component>
@@ -20,6 +20,7 @@
         <section class="hero-panel">
             <div class="hero-panel__overlay"></div>
 
+            <!--PROBLEM AREA HERE-->
             <div class="hero-panel__content" >
                 <div class="hero-panel__content-text">
                     <h1>Custom Websites from $950 </h1>
@@ -29,48 +30,54 @@
                 </div>
                 <div class="hero-panel__content-visuals">
                   <!---->  <div class="hero-panel__animation"></div>
-                    <img src="assets/images/goldcoast-web-hero-img.jpg">  --> 
+                    <img src="assets/images/goldcoast-web-hero-img.jpg" alt="alttexthere"> 
                 </div>
             </div>
+            <!--PROBLEM AREA HERE-->
+
         </section>
-
-    <section class="services">
-        <div class="wrapper">
-            <section class="services__card-container">
-                <div class="services__card">
-                    <h3>Website Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
-                    <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
-                </div>
-                <div class="services__card">
-                    <h3>SEO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
-                    <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
-                </div>
-                <div class="services__card">
-                    <h3>Ecommerce</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
-                    <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
-                </div>
-                <div class="services__card">
-                    <h3>Logo Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
-                    <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
-
-                </div>
-            </section>
-        </div>
-    </section>
-        
-
-    </main>
-
+    <article>
+        <section class="services">
+            <div class="services__title-content">
+                <h3>Services that make your</h3>
+                <h2>Website Perform</h2>
+                <p>Helping Australian businesses since 2003.</p>
+            </div>
+                <section class="services__card-container">
+                    <div class="services__card">
+                        <i class="fa-solid fa-laptop"></i>
+                      <!-- <i class="fa-regular fa-window-restore"></i> -->
+                        <h3>Website Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
+                        <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
+                    </div>
+                    <div class="services__card">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3>SEO</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
+                        <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
+                    </div>
+                    <div class="services__card">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Ecommerce</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
+                        <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
+                    </div>
+                    <div class="services__card">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <h3>Logo Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, ea?</p>
+                        <a class="services__button" href="http://localhost:5501/"><p>Find Out More</p></a>
+                    </div>
+                </section>
+        </section>
+    </article>
+</main>
     <div class="footer-wrapper">
         <footer-component></footer-component>
     </div>
 
-
-
     <script type="module" src="./js/main.js"></script>
+
 </body>
 </html>

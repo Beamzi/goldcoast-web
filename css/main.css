@@ -7,14 +7,12 @@
 }
 
 
-
 html, body, h1, h2, h3, h4, p, a {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font-family: monospace;
-
 }
 
 
@@ -29,7 +27,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 
 a {
     text-decoration: none;
@@ -46,13 +43,14 @@ a {
     background-color: rgb(34, 34, 34);
 }
 
+
 .hero-panel {
+    border: 3px red solid;
     position: relative;
     background-color: #333;
     width: 100%;
     min-height: 50vh;
     padding: 200px 10% 200px 10%;
-
     display: flex;
     justify-content: center;
     h1 {
@@ -64,9 +62,7 @@ a {
     div {
         padding: 20px;
     }
-
 }
-
 
 .hero-panel__overlay {
     position: absolute;
@@ -82,12 +78,12 @@ a {
     clip-path: circle(50% at 91% 90%);
 }
 
-
-
 .hero-panel__content {
+    border: 3px red solid;
     color: white;
     z-index: 2;
     display: flex;
+    width: 100%;
     div {
         width: 100%;
         padding: 20px;
@@ -100,8 +96,9 @@ a {
         z-index: 3;
     }
 }
-    
+
 .hero-panel__content-visuals {
+    border: 3px red solid;
     position: relative;
     display: flex;
 }
@@ -153,12 +150,36 @@ a {
     }
 }
 
-.services__card-container {
-    display: flex;
-    border: 3px red solid;
 
+
+.services {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.15084134615384615) 0%, rgba(255,255,255,1) 48%);
 }
 
+.services__title-content {
+    
+    text-align: center;
+    padding: 20px;
+    > * {
+        margin: 10px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    h2 {
+        font-size: 23px;
+    }
+}
+
+.services__card-container {
+    display: flex;
+}
+
+/* hex colors
+ 00d0ff
+    18e78e
+*/
 .services__card {
     overflow: hidden;
     border-radius: 5px; 
@@ -168,8 +189,14 @@ a {
     justify-content: center;
     flex-direction: column;
     h3, p {
-        padding: 20px;
+        border: 3px red solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+    }
+    h3 {
+        min-height: 40px;
     }
     a {
         text-align: center;
@@ -188,8 +215,34 @@ a {
     a p {
         transform: scaleY(0.5);
         transition: none;
+        padding: 20px;
+
+    }
+    i {
+        display: flex;
+        font-size: 30px;
+        justify-content: center;
+        padding: 20px;
+        border: red 3px solid;
+        &:hover {
+            animation: linear 0.5s icon-hover;
+        }
     }
 }
+@keyframes icon-hover {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(2.0);
+        
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
 @keyframes grow {
     0% {
         transform: scaleY(0.4);
