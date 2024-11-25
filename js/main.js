@@ -124,6 +124,21 @@ deleteList(0);
 
 
 
+const scroller = () => {
+	window.addEventListener('scroll', (e) => {
+		const headerRef = document.querySelector('header');
+		if (window.scrollY >= 1) {
+			headerRef.classList.add('headerScroll')
+		}
+		else if (window.scrollY <= 1) {
+			headerRef.classList.remove('headerScroll')
+			headerRef.classList.add('headerScrollBack')
+		};
+	});
+};
+scroller();
+
+
 
 
 
