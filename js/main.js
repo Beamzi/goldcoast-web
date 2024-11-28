@@ -123,7 +123,6 @@ const deleteList = (num) => {
 deleteList(0);
 
 
-
 const scroller = () => {
 	window.addEventListener('scroll', (e) => {
 		const headerRef = document.querySelector('header');
@@ -139,7 +138,30 @@ const scroller = () => {
 scroller();
 
 
+async function animateChatBubbles(chatBubbles) {
+    for (let i = 0; i < 15; i++) {
+        // Show bubbles one by one
+        for (const bubble of chatBubbles) {
+			bubble.classList.add('chat-bubbles--animation')
+            bubble.style.display = 'block';
+            await new Promise(resolve => setTimeout(resolve, 2000));
+        }
 
+        // Hide all bubbles
+        for (const bubble of chatBubbles) {
+			bubble.classList.remove('chat-bubbles--animation')
+            bubble.style.display = 'none';
+        }
+        // Pause between cycles
+        await new Promise(resolve => setTimeout(resolve, 2000));
+    }
+}
+
+// Usage
+document.addEventListener('DOMContentLoaded', () => {
+    const chatBubbles = document.querySelectorAll('.chat-bubbles');
+    animateChatBubbles(chatBubbles);
+});
 
 
 
