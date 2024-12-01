@@ -9,9 +9,10 @@ const footer = document.querySelector('footer-component');
 
 header.updateMenuData({
 	imgPath: '../assets/images/Screenshot 2024-09-10 151334ss.png',
-	homeLink: 'placeholder',
-	aboutLink: 'placeholder',
-	servicesLink: 'placeholder',
+	homeLink: 'http://localhost:5501/',
+	aboutLink: 'http://localhost:5501/pages/about.html',
+	servicesLink: 'http://localhost:5501/pages/services.html',
+	contactLink: 'http://localhost:5501/pages/contact.html',
 	instaLink: 'placeholder',
 	fbLink: 'placeholder',
 	twitterLink: 'placeholder',
@@ -121,21 +122,6 @@ const deleteList = (num) => {
 };
 
 deleteList(0);
-
-
-const scroller = () => {
-	window.addEventListener('scroll', (e) => {
-		const headerRef = document.querySelector('header');
-		if (window.scrollY >= 1) {
-			headerRef.classList.add('headerScroll')
-		}
-		else if (window.scrollY <= 1) {
-			headerRef.classList.remove('headerScroll')
-			headerRef.classList.add('headerScrollBack')
-		};
-	});
-};
-scroller();
 
 
 async function animateChatBubbles(chatBubbles) {

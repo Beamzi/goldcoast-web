@@ -25,11 +25,6 @@ a {
     color: inherit;
     font-family: monospace;
 }
-.footer-wrapper {
-    min-height: 300px;
-    background-color: rgb(34, 34, 34);
-}
-
 
 /* 
 for performance don't forget
@@ -53,81 +48,18 @@ will-change: transform, opacity; (?)
         height: 250px;
         min-height: 250px;
     }
-    .headerScroll {
-        position: fixed;
-        z-index: 200;
-        width: 100%;
-        top: 0;
-        box-shadow: 12px 12px 100px 11px rgba(0, 0, 255, .9);
-    }
 }
-
-/* order of execution applies here - note headerScrollBack must be declared before headerScroll */
 @media (min-width: 600px) {
     .header-wrapper {
         min-height: 100px;
+
     }
-    .headerScrollBack { 
-        animation: 0.2s linear forwards resizeScrollBack;
-        transform-origin: top;
-        z-index: 200;
-        > * {
-            animation: 0.2s linear forwards resizeScrollBackContent;
-            filter: blur(0.5rem);
-        }
-    }
-    @keyframes resizeScrollBack {
-        0% {
-            transform: scaleY(0.5);
-            color: white;
-            box-shadow: 12px 12px 100px 11px rgba(0, 0, 255, .8);
-        }
-        100% {
-            transform: scaleY(1);
-            filter: blur(0rem);
-            color: black;
-            box-shadow: 12px 12px 100px 11px rgba(0, 0, 0, 1);
-        }
-    }
-    @keyframes resizeScrollBackContent {
-        0% {
-            transform: scaleY(1);
-        }
-        100% {
-            transform: scaleY(1);
-            filter: blur(0rem);
-        }
-    }
-    .headerScroll {
-        position: fixed;
-        z-index: 200;
-        width: 100%;
-        height: 80px;
-        top: 0;
-        background-color: white;
-        scroll-behavior: smooth;
-        animation: 0.2s linear forwards resize;
-        transform-origin: top;
-        > * {
-            animation: 0.3s linear forwards resizeContent;
-            transform: scaleY(2);
-            filter: blur(0.3rem);
-            color: white;
-        }
-    }
-    @keyframes resize {
-        100% {
-            transform: scaleY(0.5);
-            box-shadow: 12px 12px 100px 11px rgba(0, 0, 255, .8);
-        }
-    }
-    @keyframes resizeContent {
-        100% {
-            filter: blur(0rem);
-            color: black;
-        }
+    .footer-wrapper {
+        min-height: 200px;
     }
 }
+
+
 
 .global-button-type-1 {
     position: relative;
@@ -154,6 +86,7 @@ will-change: transform, opacity; (?)
         }
     }
 }
+
 
 @keyframes pointing {
     50% {
@@ -236,11 +169,9 @@ will-change: transform, opacity; (?)
     position: relative;
     display: flex;
     justify-content: center;
-
 }
 
 .chat-bubbles__container {
-    border: 3px red solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,9 +229,6 @@ will-change: transform, opacity; (?)
 
     }
 }
-
-
-
 
 
 /*         clip-path: polygon( 3.00% 0.00%, 97.00% 0.00%, 99.60% 7.50%, 100% 73.50%, 97.20% 81.00%, 78.00% 82.00%, 78.00% 100%, 62.20% 81.00%, 3.00% 81.00%, 0.00% 73.50%, 0.00% 7.50% );
